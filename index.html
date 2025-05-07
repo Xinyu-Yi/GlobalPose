@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GlobalPose</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="https://xinyu-yi.github.io/GlobalPose/">GlobalPose</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More works <span class="sr-only">(current)</span></a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="https://xinyu-yi.github.io/TransPose/">TransPose</a>
+              <a class="dropdown-item" href="https://xinyu-yi.github.io/PIP/">PIP</a>
+              <a class="dropdown-item" href="https://xinyu-yi.github.io/EgoLocate/">EgoLocate</a>
+			  <a class="dropdown-item" href="https://xinyu-yi.github.io/PNP/">PNP</a>
+			  <a class="dropdown-item" href="https://xinyu-yi.github.io/GlobalPose/">GlobalPose</a>
+              <!--div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="https://xinyu-yi.github.io/">Xinyu Yi</a-->
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#video">Video</a>
+          </li>
+          <!--li class="nav-item">
+            <a class="nav-link" href="#result">Result</a>
+          </li-->
+          <li class="nav-item">
+            <a class="nav-link" href="#citation">Citation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+      
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-12">
+          <div class="container mt-5 mb-2">
+            <h1 class="text-center">Improving Global Motion Estimation</h1>
+            <h2 class="text-center">in Sparse IMU-based Motion Capture with Physics</h2>
+            <div class="text-center container mb-4 mt-4 ablack">
+              <p>
+                <a href="https://xinyu-yi.github.io/">Xinyu Yi</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://shaohua-pan.github.io/">Shaohua Pan</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="http://xufeng.site/">Feng Xu</a>
+                <br>
+                <a href="https://www.tsinghua.edu.cn/">Tsinghua University</a>
+              </p>
+              <br>
+              <p>
+                <i>
+                  Accepted by <a href="https://s2025.siggraph.org/">SIGGRAPH 2025</a> (Journal track)
+                </i>
+              </p>
+            </div>
+            <!--img src="images/teaser.jpg" alt="" class="img-fluid mt-2 mb-2"--> 
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <div class="container mb-4">
+      <div class="container">
+        <div class="row">
+          <img src="images/teaser.jpg" class="img-fluid mt-2 mb-2" alt="Teaser">
+        </div>
+      </div>
+      <div class="text-center mt-2">
+		GlobalPose captures human motion from 6 IMUs in <strong>unconstrained 3D space</strong> (left). The method reconstructs human motion along with <strong>3D-space contacts, contact forces, joint torques, and interacting proxy surfaces</strong> in real time (right).
+      </div>
+    </div>
+      
+    <div class="container">
+      <div class="row mb-1">
+        <div class="text-center col-4">
+          <div class="container mb-2" style="width: 6rem"><img src="images/paper.svg" alt="Download Paper" class="card-img"/></div>
+          <a class="btn btn-danger btn-lg" href="" role="button">Paper</a>
+        </div>
+        <div class="text-center col-4">
+          <div class="container mb-2" style="width: 6rem"><img src="images/video.svg" alt="Download Video" class="card-img"/></div>    
+          <a class="btn btn-info btn-lg" href="https://github.com/Xinyu-Yi/GlobalPose/raw/page/videos/demo.mp4" role="button">Video</a>
+        </div>
+        <div class="text-center col-4">
+          <div class="container mb-2" style="width: 6rem"><img src="images/code.svg" alt="Download Code" class="card-img"/></div>    
+          <a class="btn btn-success btn-lg" href="https://github.com/Xinyu-Yi/GlobalPose" role="button">Code</a>
+        </div>
+      </div>
+	  <!--div class="text-center mt-5"><i>Codes will be released in June (I'll try my best). &gt;_&lt;</i></div-->
+	  <hr>
+    </div>
+    
+    <div class="container">
+      <h2 class="text-center">Abstract</h2>
+      <div class="container">
+        <p>
+          By learning human motion priors, motion capture can be achieved by 6
+ inertial measurement units (IMUs) in recent years with the development of
+ deep learning techniques, even though the sensor inputs are sparse and noisy.
+ However, human global motions are still challenging to be reconstructed
+ by IMUs. This paper aims to solve this problem by involving physics. It
+ proposes a physical optimization scheme based on multiple contacts to
+ enable physically plausible translation estimation in the full 3D space where
+ the z-directional motion is usually challenging for previous works. It also
+ considers gravity in local pose estimation which well constrains human
+ global orientations and refines local pose estimation in a joint estimation
+ manner. Experiments demonstrate that our method achieves more accurate
+ motion capture for both local poses and global motions. Furthermore, by
+ deeply integrating physics, we can also estimate 3D contact, contact forces,
+ joint torques, and interacting proxy surfaces.
+        </p>
+      </div>
+      <hr>
+    </div>
+      
+    <div class="container" id="video">
+      <h2 class="text-center">Video</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="embed-responsive embed-responsive-16by9">
+              <!--iframe class="embed-responsive-item" src="https://www.youtube.com/embed/c10-KvBoZMA" allowfullscreen></iframe-->
+			  <video controls><source src="https://github.com/Xinyu-Yi/GlobalPose/raw/page/videos/demo.mp4" type="video/mp4"></video>
+            </div>
+          </div>
+        </div>
+      </div>
+	  <hr>
+    </div>
+    
+    <div class="container mt-3" id="acknowledgments">
+      <h2 class="text-center">Acknowledgments</h2>
+      <div class="container mb-4">
+          <p>This work was supported by the National Key R&amp;D Program of
+ China (2023YFC3305600), the Zhejiang Provincial Natural Science
+ Foundation (LDT23F02024F02), and the NSFC (No.61822111, 62021002).
+ This work was also supported by THUIBCS, Tsinghua University,
+ and BLBCI, Beijing Municipal Education Commission. The authors
+ would like to thank Wenbin Lin and Yunzhe Shao for their help on
+ the live demos. Feng Xu is the corresponding author.</p>
+      </div>
+	  <hr>
+    </div>
+   
+    <div class="container" id="citation">
+      <h2 class="text-center">Citation</h2>
+      <div class="container">
+        <div class="container pt-3" style="background-color: #EEF0F2">
+          <pre class="mb-3 ml-3">
+
+          </pre>
+        </div>
+      </div>
+    </div>
+   
+    <div class="container mt-3" id="contact">
+	  <div class="container">
+		  <div class="row">
+			<div class="col-lg-4 col-md-6 col-sm-6 mb-md-0">
+			  <address>
+				<br>Contact: <a href="mailto:yixy20@mails.tsinghua.edu.cn">yixy20@mails.tsinghua.edu.cn</a>
+			  </address>
+			</div>
+			<div class="col-lg-3 col-12">
+			  <!--a href="https://ethz.ch/en.html"><img src="images/eth.png" alt="ETH Zurich" class="card-img-bottom"></a-->
+			</div>
+			<div class="col-lg-3 col-12">
+			  <!--a href="https://ethz.ch/en.html"><img src="images/eth.png" alt="ETH Zurich" class="card-img-bottom"></a-->
+			</div>
+			<div class="col-lg-2 col-12">
+			  <a href="https://www.tsinghua.edu.cn/"><img src="images/tsinghua.png" alt="Tsinghua University" class="card-img-bottom"></a>
+			</div>
+		  </div>
+		</div>
+    </div>
+    <hr> 
+      
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © Xinyu Yi. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.3.1.js"></script>
+  </body>
+</html>
