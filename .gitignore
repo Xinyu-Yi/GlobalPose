@@ -1,0 +1,6 @@
+models
+data/temp
+data/test_datasets
+data/weights.pt
+.idea
+__pycache__/
