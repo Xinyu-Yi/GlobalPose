@@ -34,7 +34,7 @@ To run the test, you should install `chumpy open3d pybullet qpsolvers numpy-quat
 
 ### Prepare test datasets
 
-1. Download the preprocessed DIP-IMU and TotalCapture dataset (with two different calibrations as listed in the paper) from [here](https://github.com/Xinyu-Yi/PNP/raw/page/files/test_datasets.zip). Please note that by downloading the preprocessed datasets you agree to the same license conditions as for the DIP-IMU dataset (https://dip.is.tue.mpg.de/) and the TotalCapture dataset (https://cvssp.org/data/totalcapture/). You may only use the data for scientific purposes and cite the corresponding papers.
+1. Download the preprocessed DIP-IMU and TotalCapture dataset (with two different calibrations as listed in the paper) from [here](https://github.com/Xinyu-Yi/GlobalPose/raw/page/files/test_datasets.zip). Please note that by downloading the preprocessed datasets you agree to the same license conditions as for the DIP-IMU dataset (https://dip.is.tue.mpg.de/) and the TotalCapture dataset (https://cvssp.org/data/totalcapture/). You may only use the data for scientific purposes and cite the corresponding papers.
 2. Rename and put the files into `data/test_datasets/dipimu.pt`, `data/test_datasets/totalcapture_dipcalib.pt`, `data/test_datasets/totalcapture_officalib.pt`.
 
 *We provided a `process.py` script, which was used to generate the preprocessed values from the raw datasets (not cleaned, may need some modifications).*
@@ -59,4 +59,6 @@ Then, run the unity viewer (download from [here](https://github.com/Xinyu-Yi/Glo
 python live_demo.py
 ```
 
-A useful tip: the walking-based calibration as described in the paper is provided in `articulate/utils/noitom/PN_lab.py: CalibratedIMUSet._walking_calibration`.
+*A useful tip: the walking-based calibration as described in the paper is provided in `articulate/utils/noitom/PN_lab.py: CalibratedIMUSet._walking_calibration`.*
+
+*Note: The author has graduated and currently has limited time to format the codes in the repository. If you encounter any issues or have questions, feel free to open an issue. You may also contact me via the updated email address: yixy20@tsinghua.org.cn. (note that the university email provided in the paper is no longer active after graduation)*
