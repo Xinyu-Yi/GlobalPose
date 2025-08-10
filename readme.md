@@ -61,4 +61,20 @@ python live_demo.py
 
 *A useful tip: the walking-based calibration as described in the paper is provided in `articulate/utils/noitom/PN_lab.py: CalibratedIMUSet._walking_calibration`.*
 
+### Synthesize IMU from SMPL
+
+We provide a script for IMU measurement synthesis from SMPL motion data.
+
+```
+python imu_synthesis.py
+```
+
+The code contains an example to synthesize IMU for the first sequence of TotalCapture. The default setting disables the use of ESKF and run angular velocity integration instead, which is very fast during training and is used in our work GlobalPose. While if you know exactly your IMU intrinsics and do not care about long training time, you can enable the C++-based ESKF by:
+
+```
+def _syn_imu(p, R, skip_ESKF=False):   # set skip_ESKF to False
+```
+
+This may slightly improve performance (used in our previous work [PNP](https://xinyu-yi.github.io/PNP/)). Note that both versions have modeled the IMU raw signal noise and calibration error, and we recommend using the default setting for its fast speed and comparable effectiveness.
+
 *Note: The author has graduated and currently has limited time to format the codes in the repository. If you encounter any issues or have questions, feel free to open an issue. You may also contact me via the updated email address: yixy20@tsinghua.org.cn. (note that the university email provided in the paper is no longer active after graduation)*
